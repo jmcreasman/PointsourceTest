@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="pointsource">
+
+<head>
+  <link rel="stylesheet" src="css/main.css">
+</head>
+
+<body ng-controller="UserProfile as profile">
+  <main>
+    <section class="profile-page-bio">
+      <div class="profile-picture">
+        <img style="height:88px; width:88px;" ng-src="http://applicant.pointsource.us/{{profile.bio.person.pictureURL}}">
+      </div>
+      <div class="profile-name">
+        <p>{{profile.bio.person['first-name']}} {{profile.bio.person['family-name']}}</p>
+      </div>
+      <div class="profile-address">
+        <p>{{profile.bio.person.address['house-number']}} {{profile.bio.person.address.street}}</p>
+        <p>{{profile.bio.person.address.city}}, {{profile.bio.person.address.st}}</p>
+        <p>{{profile.bio.person.address['zip-code']}}</p>
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
