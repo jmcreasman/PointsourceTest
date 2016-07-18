@@ -1,18 +1,41 @@
+* {
+    box-sizing: border-box;
+}
 .profile-page-bio {
-  width: 728px;
-  height: 96px;
+  background-color: red;
+  max-width: 728px;
+  max-height: 96px;
+}
+.profile-page-bio .profile-picture {
+  background-color: blue;
+  width: 12.5%;
+  float: left;
+  margin-right: 10px
 }
 .profile-page-bio .profile-picture img {
+  width: 88px;
+  height: 88px;
   border: 4px solid #ee4494;
 }
 .profile-page-bio .profile-name {
+  background-color: green;
+  /*width: 55%;*/
+  float: left;
+  text-align: left;
   font-family: Arial;
   font-weight: bold;
   font-size: 36px;
   color: #575757;
+  margin-top: -1%;
 }
 .profile-page-bio .profile-address {
+  background-color: yellow;
+  /*width: 27%;*/
+  float: right;
+  text-align: center;
+  line-height: 5px;
   font-family: Arial;
   font-size: 18px;
   color: #575757;
+  margin-right: 19px;
 }

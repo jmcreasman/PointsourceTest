@@ -9,15 +9,15 @@
   <main>
     <section class="profile-page-bio">
       <div class="profile-picture">
-        <img style="height:88px; width:88px;" ng-src="http://applicant.pointsource.us/{{profile.bio.person.pictureURL}}">
+        <img ng-src="http://applicant.pointsource.us/{{profile.bio.person.pictureURL}}">
       </div>
       <div class="profile-name">
-        <p>{{profile.bio.person['first-name']}} {{profile.bio.person['family-name']}}</p>
+        <p>Name{{profile.bio.person['first-name']}} {{profile.bio.person['family-name']}}</p>
       </div>
       <div class="profile-address">
-        <p>{{profile.bio.person.address['house-number']}} {{profile.bio.person.address.street}}</p>
-        <p>{{profile.bio.person.address.city}}, {{profile.bio.person.address.st}}</p>
-        <p>{{profile.bio.person.address['zip-code']}}</p>
+        <p>Line1{{profile.bio.person.address['house-number']}} {{profile.bio.person.address.street}}</p>
+        <p>Line2{{profile.bio.person.address.city}}, {{profile.bio.person.address.st}}</p>
+        <p>Line3{{profile.bio.person.address['zip-code']}}</p>
       </div>
     </section>
   </main>
