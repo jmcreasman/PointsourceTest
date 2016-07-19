@@ -8,20 +8,21 @@
 <body ng-controller="UserProfile as profile">
   <main>
     <section class="profile-page-bio">
-      <div class="profile-picture">
-        <img ng-src="http://applicant.pointsource.us/{{profile.bio.person.pictureURL}}">
+      <div class="profile-picture" ng-controller="UserProfile as profile">
+        <img ng-class="profile.bio.person.gender" ng-src="http://applicant.pointsource.us/{{profile.bio.person.pictureURL}}">
       </div>
       <div class="profile-name">
-        <p>Name{{profile.bio.person['first-name']}} {{profile.bio.person['family-name']}}</p>
+        <p>{{profile.bio.person['first-name']}} {{profile.bio.person['family-name']}}</p>
       </div>
       <div class="profile-address">
-        <p>Line1{{profile.bio.person.address['house-number']}} {{profile.bio.person.address.street}}</p>
-        <p>Line2{{profile.bio.person.address.city}}, {{profile.bio.person.address.st}}</p>
-        <p>Line3{{profile.bio.person.address['zip-code']}}</p>
+        <p>{{profile.bio.person.address['house-number']}} {{profile.bio.person.address.street}}</p>
+        <p>{{profile.bio.person.address.city}}, {{profile.bio.person.address.st}}</p>
+        <p>{{profile.bio.person.address['zip-code']}}</p>
       </div>
     </section>
   </main>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 
